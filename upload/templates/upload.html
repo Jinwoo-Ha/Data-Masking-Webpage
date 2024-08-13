@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}  <!-- Add this line -->
+{% block title %}Upload File{% endblock %}
+
+{% block content %}
+<style>
+    .title {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        color: white;
+    }
+    .upload-box {
+        margin-bottom: 15px;
+        position: relative;
+        width: 80%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    input[type="file"] {
+        opacity: 0; /* 파일 선택 버튼을 숨김 */
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+    }
+    .upload-box label {
+        display: block;
+        padding: 10px;
+        background-color: black;
+        color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        z-index: 1;
+        position: relative;
+    }
+    .continue-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        margin-bottom: 20px; /* 전체적으로 더 위로 이동하도록 margin-bottom 조정 */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .continue-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<div class="title">
+    <img src="{% static 'icon4.png' %}" alt="lock Icon">
+    <h1>Customer Data Masking AI</h1>
+</div>
+<form method="post" enctype="multipart/form-data" action="{% url 'upload_file' %}">
+    {% csrf_token %}
+    <div class="upload-box">
+        <label for="audio_file">Upload audio file</label>
+        <input type="file" name="audio_file" id="audio_file" required>
+    </div>
+    <button type="submit" class="continue-btn">Click to Mask Data</button>
+</form>
+{% endblock %}
