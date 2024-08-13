@@ -18,13 +18,21 @@
             background-color: #161616;
             color: #fff;
             padding: 10px 20px;
-            text-align: center;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            padding-bottom: 20px;
-            padding-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 4%;
+        }
+        .navbar .logo {
+            position: absolute;
+            left: 0px;
+        }
+        .navbar .logo img {
+            height: 45px;
         }
         .navbar a {
             color: #fff;
@@ -37,22 +45,26 @@
             text-decoration: underline;
         }
         .container {
-        text-align: center;
-        background: black;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px #0000001a;
-        margin-top: 100px;
-    }
+            text-align: center;
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0000001a;
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
+        <div class="logo">
+            <a href="{% url 'upload_file' %}">
+                <img src="{% static 'logo.png' %}" alt="Logo">
+            </a>
+        </div>
         <a href="{% url 'upload_file' %}">Service</a>
         <a href="{% url 'about' %}">About</a>
         <a href="{% url 'api' %}">API</a>
         <a href="{% url 'contact_us' %}">Contact Us</a>
-
     </div>
     <div class="container">
         {% block content %}{% endblock %}
