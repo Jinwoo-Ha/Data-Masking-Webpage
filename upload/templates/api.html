@@ -3,30 +3,93 @@
 {% block title %}API Documentation{% endblock %}
 
 {% block content %}
-<h1>API Documentation</h1>
-<p>Welcome to the API documentation for our data masking service. Our API allows you to integrate data masking functionalities into your applications seamlessly.</p>
+{% load static %} <!-- Static 파일 로드를 위해 추가 -->
 
-<h2>Getting Started</h2>
-<p>To begin using the API, you need to authenticate using your API key. You can find your API key in your account dashboard after logging in.</p>
+<style>
+    .api-container {
+        background-color: #f8f9fa;
+        padding: 50px;
+        max-width: 1000px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        font-family: 'Roboto', sans-serif;
+    }
+    .api-header {
+        font-size: 42px;
+        font-weight: 700;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .api-content {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #34495e;
+        margin-bottom: 30px;
+    }
+    .api-content h2 {
+        font-size: 28px;
+        color: #2980b9;
+        margin-top: 30px;
+    }
+    .api-content ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .api-content li {
+        background-color: #ecf0f1;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: #2c3e50;
+    }
+    .api-content pre {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        overflow-x: auto;
+    }
+    .api-content code {
+        background-color: #e74c3c;
+        color: #ecf0f1;
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
+    .api-content .highlight {
+        color: #e74c3c;
+        font-weight: 700;
+    }
+</style>
 
-<h2>Endpoints</h2>
-<ul>
-    <li><strong>POST /mask</strong>: Masks sensitive data in a given dataset.</li>
-    <li><strong>GET /status</strong>: Retrieves the status of a masking operation.</li>
-</ul>
+<div class="api-container">
+    <div class="api-header">
+        API Documentation
+    </div>
+    <div class="api-content">
+        <p>Welcome to the API documentation for our data masking service. Our API allows you to integrate data masking functionalities into your applications seamlessly, enabling you to enhance your data security and compliance.</p>
 
-<h2>Example Request</h2>
-<pre>
-curl -X POST https://api.yourservice.com/mask \
+        <h2>Getting Started</h2>
+        <p>To begin using the API, you need to authenticate using your <span class="highlight">API key</span>. You can find your API key in your account dashboard after logging in.</p>
+
+        <h2>Endpoints</h2>
+        <ul>
+            <li><strong>POST <code>/mask</code></strong>: Masks sensitive data in a given dataset.</li>
+            <li><strong>GET <code>/status</code></strong>: Retrieves the status of a masking operation.</li>
+        </ul>
+
+        <h2>Example Request</h2>
+        <pre><code>curl -X POST https://api.yourservice.com/mask \
 -H "Authorization: Bearer YOUR_API_KEY" \
--d '{"data": "Your sensitive data here"}'
-</pre>
+-d '{"data": "Your sensitive data here"}'</code></pre>
 
-<h2>Response</h2>
-<pre>
-{
+        <h2>Response</h2>
+        <pre><code>{
     "masked_data": "Masked data result"
-}
-</pre>
-
+}</code></pre>
+    </div>
+</div>
 {% endblock %}

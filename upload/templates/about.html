@@ -3,8 +3,89 @@
 {% block title %}About Us{% endblock %}
 
 {% block content %}
-<h1>About Our Data Masking Service</h1>
-<p>Our service is dedicated to providing top-notch data masking solutions to protect sensitive information. 
-   With a focus on security and compliance, we ensure that your data remains confidential while retaining its utility for testing and development purposes.</p>
-<p>Our team consists of industry experts with years of experience in data security and software development, committed to delivering reliable and efficient solutions.</p>
+{% load static %} <!-- Static 파일 로드를 위해 추가 -->
+
+<style>
+    .about-container {
+        background-color: #000;
+        padding: 50px;
+        max-width: 900px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .about-header {
+        font-size: 36px;
+        font-weight: bold;
+        color: hsl(0, 0%, 100%);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .about-content {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #ffffff;
+        margin-bottom: 20px;
+        text-align: left; /* <p> 태그를 왼쪽 정렬 */
+    }
+    .about-content h2 {
+        font-size: 28px;
+        color: #ffffff;
+        margin-top: 50px;
+        text-align: left; /* h2 태그를 왼쪽 정렬 */
+    }
+    .about-content p {
+        margin-bottom: 15px;
+        text-align: left; /* <p> 태그를 왼쪽 정렬 */
+    }
+    .about-content img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;
+    }
+    .team-section {
+        margin-top: 40px;
+    }
+    .team-section h2 {
+        font-size: 28px;
+        color: #ffffff;
+        text-align: left; /* h2 태그를 왼쪽 정렬 */
+    }
+    .team-section img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto;   
+    }
+    .team-member {
+        font-size: 18px;
+        color: #ffffff;
+        margin-bottom: 15px;
+        text-align: left; /* <p> 태그를 왼쪽 정렬 */
+    }
+</style>
+
+<div class="about-container">
+    <div class="about-header">
+      Trusted Compliance, <br>
+      Unmatched Protection.
+    </div>
+    <div class="about-content">
+        <h2>Our Mission</h2>
+        <p>Our mission is to offer the highest standard of data protection by leveraging cutting-edge deep learning algorithms powered by Large Language Models (LLMs). We focus on ensuring that sensitive financial data is not just masked, but meticulously protected to meet and exceed industry regulations such as GDPR, PCI DSS, and HIPAA. By integrating advanced AI-driven techniques, we deliver a service that transforms data masking from a compliance task into a strategic advantage for our clients.</p>
+        <img src="{% static 'protection.jpg' %}" alt="Mission Image">
+
+        <h2>Why Choose Us?</h2>
+        <p>What sets our service apart is our deep understanding of the financial sector’s unique challenges and the innovative application of LLM-based deep learning algorithms. Our solutions are designed to retain the utility of masked data while ensuring that it remains anonymized and secure. We offer custom-tailored data masking solutions that not only protect your sensitive information but also enhance your ability to use this data effectively in a variety of operational scenarios.</p>
+        <img src="{% static 'service.jpg' %}" alt="Why Choose Us Image">
+    </div>
+    
+    <div class="team-section">
+        <h2>Meet Our Team</h2>
+        <p class="team-member"><strong>Jiyoon Kang</strong> - Chief Technology Officer (CTO): With over 15 years of experience in software development and data security, John leads our technical team in developing advanced data masking solutions using the latest AI technologies.</p>
+        <p class="team-member"><strong>Junhee Lee</strong> - Lead Data Scientist: Jane specializes in machine learning and data privacy, with a focus on implementing LLM-based algorithms to enhance the security and utility of masked data.</p>
+        <p class="team-member"><strong>Jinwoo Ha</strong> - Compliance Officer: Michael ensures that all our services adhere to the latest industry regulations, providing our clients with the confidence that their data masking processes are fully compliant with global standards.</p>
+    </div>
+</div>
 {% endblock %}
