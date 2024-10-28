@@ -1,73 +1,84 @@
 
-
             
 
-# 📖 Multi-Cultural Fairytale LLM Service by Korea University
+# 🧚 Multi Cultural Fairytale LLM Service by Korea University
 
 
 
 
 
-## 📝 Project Description
-This project is a multi-cultural fairytale Language Learning Model (LLM) service that utilizes GPT for generating real-time story content. It is designed to reflect various keywords inputted by users, creating diverse content for children of different age groups. The service also includes a chatbot feature that can provide accurate information to children, making learning more fun and effective. 
+## 🎈 Project Description
+The Multi Cultural Fairytale LLM service is a **real-time** content creation service based on user input keywords, designed to educate children about various cultures in an interactive and engaging manner. It's an innovative project developed by Korea University as part of the Upstage LLM Innovators Challenge.
 
 
 
 
 
-## 🌟 Key Features
+This project leverages **Django** for backend development, **OpenAI API** for story generation, and other advanced technologies. It is designed to increase multicultural acceptance among children and provide accurate information through interactive chatbot functionality.
 
 
 
 
 
-- 📚 **Real-Time Story Content Creation:** Generates stories based on user's inputted keywords, creating an interactive and engaging learning experience.
-- 🤖 **Chatbot Feature:** Equipped with a chatbot feature that can answer children's questions accurately, enhancing their learning experience.
-- 🌎 **Multi-Cultural Education:** Aims to educate children about different cultures, fostering acceptance, and understanding of diverse societies.
-- 🎙 **Voice Communication:** Supports real-time voice communication for a more immersive learning experience.
-- 🗣 **Language Learning:** Provides language-learning features, allowing children to learn greetings from different countries.
+## ⭐ Key Features
+- **Real-time Story Generation**: The service generates real-time fairy tales reflecting the user's age and interests.
+- **Interactive Chatbot**: A chatbot feature that allows children to ask questions they are curious about.
+- **Voice Reader and Call Service**: A voice reader and call service for real-time voice communication.
+- **Language Learning Feature**: A feature that allows users to learn greetings from countries of interest.
 
 
 
 
 
-## 💾 Installation Guide
-Follow these steps to set up the project:
-1. Clone the project:
-```bash
-git clone {github repository url}
-```
-2. Install the required packages:
-```bash
-pip install -r requirements.txt
-```
-3. Set up your environment variables. You'll need an `UPSTAGE_API_KEY` and `OPENAI_API_KEY` which you can set in your `.env` file:
-```bash
-cp .env.example .env
-```
+## 🔧 Installation Guide
+1. Clone this Github repository:
+   ```
+   git clone {github repository url}
+   ```
+2. Install required Python packages:
+   ```
+   pip install -r requirements.txt
+   ```
+3. Setup Django database:
+   ```
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
 4. Run the Django server:
-```bash
-python manage.py runserver
-```
-## 📚 How to Contribute
-We welcome all contributions! If you're looking to contribute, you can help in the following ways:
-- **Bug Reports:** Report any bugs you come across by creating a new issue.
-- **New Features:** Have an idea for a new feature? Feel free to submit it as an issue.
-- **Documentation:** Help us improve our README or wiki by suggesting changes.
-- **Code Reviews:** Review our pull requests and provide valuable feedback.
+   ```
+   python manage.py runserver
+   ```
 
 
 
 
 
-Before submitting your contribution, please make sure to check our [contribution guidelines](CONTRIBUTING.md).
+## 🙋‍♀️ How to Contribute
+We welcome all contributors who are interested in this project. You can contribute in many ways such as fixing bugs, adding new features, and improving documentation. Here are the steps to contribute:
+
+
+
+
+
+1. Fork the project in GitHub.
+2. Clone the forked project to your local machine.
+3. Create a new branch for your changes.
+4. Make your changes and commit them with a meaningful commit message.
+5. Push your changes to your forked repository.
+6. Create a pull request describing your changes.
+
+
+
+
+
+We appreciate your efforts to contribute.
 
 
 
 
 
 ## 🎉 Acknowledgments
-A huge shoutout to Korea University and all the developers who worked on this project. A special mention to Upstage LLM Innovators Challenge for providing a platform for this innovative project.
+A big thank you to Korea University and all the developers who worked on this project. Special thanks to Upstage LLM Innovators Challenge for providing a platform for this innovative project.
 
 
         
